@@ -1,0 +1,121 @@
+@use '../utilities/all' as *;
+
+.output-todos {
+  list-style: none;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: .5px solid var(--circle-border);
+
+    @include view-below(sm) {
+      padding: 16px 19px;
+    }
+
+    &>div {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      @include view-below(sm) {
+        gap: 13px;
+      }
+    }
+
+    &.completed {
+      p {
+        color: var(--completed-text);
+        text-decoration: line-through;
+      }
+    }
+
+    input[type="checkbox"] {
+      appearance: none;
+      min-width: 25px;
+      min-height: 25px;
+      border-radius: 100%;
+      border: 1px solid var(--circle-border);
+      position: relative;
+      cursor: pointer;
+
+      @include view-below(sm) {
+        min-width: 20px;
+        min-height: 20px;
+      }
+    }
+
+    input[type="checkbox"]:checked {
+      border: none;
+    }
+
+    input[type="checkbox"]:checked::before {
+      content: "";
+      display: block;
+      background-image: var(--Check-Background);
+      z-index: 3;
+      border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+
+      @include view-below(sm) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    input[type="checkbox"]:checked::after {
+      content: "";
+      display: block;
+      background-image: url(../images/icon-check.svg);  
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 13px;
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      border: 1px solid transparent;
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+
+      @include view-below(sm) {
+        width: 20px;
+        height: 20px;
+        background-size: 9.5px;
+      }
+    }
+
+    p {
+      color: var(--input-text);
+      font-size: 19px;
+      letter-spacing: -0.76px;
+
+      @include view-below(sm) {
+        font-size: 12px;
+        letter-spacing: -0.12px;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      min-width: 15px;
+      min-height: 15px;
+      cursor: pointer;
+      display: none;
+      
+      @include view-below(sm) {
+        min-width: 12px;
+        min-height: 12px;
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

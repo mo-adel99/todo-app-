@@ -1,0 +1,51 @@
+@use '../utilities/all' as *;
+
+.input {
+  background-color: var(--input-background);
+  padding: 20px 0 20px 24px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+
+  @include view-below(sm) {
+    padding: 16px 0 16px 19px;
+    margin-bottom: 16px;
+    gap: 13px;
+  }
+
+  .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid var(--circle-border);
+
+    @include view-below(sm) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: inherit;
+    padding-right: 20px;
+    color: var(--input-text);
+    font-size: 19px;
+    letter-spacing: -0.76px;
+    width: calc(100% - 50px);
+    caret-color: var(--Bright-Blue);
+
+    @include view-below(sm) {
+      font-size: 13px;
+      letter-spacing: -0.12px;
+    }
+
+    &::placeholder {
+      color: var(--placeholder-text);
+    }
+  }
+}

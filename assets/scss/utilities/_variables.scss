@@ -1,0 +1,16 @@
+// typography
+$font: 'Josefin Sans', "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// breakpoints
+$breakpoints: ( 
+  // 600px 
+  sm: 37.5rem, 
+  // 768px 
+  md: 48rem, 
+  // 992px 
+  lg: 62rem, 
+  // 1200px 
+  xlg: 75rem, 
+  // 1440px
+  xxl: 90rem
+);

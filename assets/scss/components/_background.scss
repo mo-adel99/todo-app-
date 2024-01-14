@@ -1,0 +1,12 @@
+@use '../utilities/all' as *;
+
+body {
+  background-color: var(--body-background);
+  background-image: var(--background-dekstop);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include view-below(sm) {
+    background-image: var(--background-mobile);
+  }
+}

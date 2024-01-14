@@ -1,26 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Todo app</title>
 </head>
 <body>
 
-  Todo
+  <section>
+    <div class="container">
+      <div class="title">
+        <h1>  
+          Todo
+        </h1>
+        
+        <span class="icon"></span>
+      </div>
+    
+      <div class="input">
+        <div class="circle"></div>
+        
+        <input type="text" name="todo-input" autocomplete="off" id="todo-input" placeholder="Create a new todo...">
+      </div>
 
-  <!-- Add dynamic number --> items left
+      <div class="output">
+        <ul id="todos-list" class="output-todos">
+          <li class="completed">
+            <div>
+              <input type="checkbox" name="check-todo" checked>
+              <p>Complete online Javascript course</p>
+            </div>
+            <button><img src="assets/images/icon-cross.svg" alt="delete todo"></button>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" name="check-todo">
+              <p>Jog around the park 3x</p>
+            </div>
+            <button><img src="assets/images/icon-cross.svg" alt="delete todo"></button>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" name="check-todo">
+              <p>10 minutes meditation</p>
+            </div>
+            <button><img src="assets/images/icon-cross.svg" alt="delete todo"></button>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" name="check-todo">
+              <p>Read for 1 hour</p>
+            </div>
+            <button><img src="assets/images/icon-cross.svg" alt="delete todo"></button>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" name="check-todo">
+              <p>Pick up groceries</p>
+            </div>
+            <button><img src="assets/images/icon-cross.svg" alt="delete todo"></button>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" name="check-todo">
+              <p>Complete Todo App on Frontend Mentor</p>
+            </div>
+            <button><img src="assets/images/icon-cross.svg" alt="delete todo"></button>
+          </li>
+        </ul>
 
-  All
-  Active 
-  Completed
+        <div class="controls">
+          <span class="items-left">
+            <span class="items-left-counter">5</span>
+            items left
+          </span>
+        
+          <span class="state-buttons">
+            <p class="active">All</p>
+            <p>Active</p>
+            <p>Completed</p>
+          </span>
+        
+          <span class="clear-completed" id="clearBtn">
+            Clear Completed
+          </span>
+        </div>
+      </div>
 
-  Clear Completed
+      <span class="state-buttons-mobile">
+        <p class="active">All</p>
+        <p>Active</p>
+        <p>Completed</p>
+      </span>
 
-  Drag and drop to reorder list
+      <p class="drag-text">
+        Drag and drop to reorder list
+      </p>
+    </div>
+  </section>
 
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+@use '../utilities/all' as *;
+
+section {
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+
+  @include view-below(sm) {
+    padding-top: 48px;
+  }
+
+  .container {
+    width: 540px;
+
+    @include view-below(sm) {
+      width: 90%;
+    }
+  }
+}

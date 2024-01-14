@@ -1,0 +1,32 @@
+@use '../utilities/all' as *;
+
+.state-buttons-mobile {
+  display: none;
+
+  @include view-below(sm) {
+    border-radius: 7px;
+    background-color: var(--input-background);
+    padding: 20px 24px;
+    color: var(--placeholder-text);
+    letter-spacing: -0.14px;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+    font-weight: 600;
+    display: flex;
+    margin-bottom: 42px;
+
+    &>* {
+      cursor: pointer;
+    }
+
+    p:hover, .clear-completed:hover {
+      color: var(--input-text);
+    }
+
+    p.active {
+      color: var(--Bright-Blue);
+    }
+  }
+}

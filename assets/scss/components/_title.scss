@@ -1,0 +1,38 @@
+@use '../utilities/all' as *;
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+
+  @include view-below(sm) {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 40px;
+    letter-spacing: 14.8px;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include view-below(sm) {
+      font-size: 27px;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: var(--theme-icon);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @include view-below(sm) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

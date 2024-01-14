@@ -1,0 +1,42 @@
+@use '../utilities/all' as *;
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  color: var(--placeholder-text);
+  letter-spacing: -0.14px;
+  font-size: 14px;
+  
+  .state-buttons {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    font-weight: 600;
+
+    &>* {
+      cursor: pointer;
+    }
+
+    p:hover, .clear-completed:hover {
+      color: var(--input-text);
+    }
+
+    p.active {
+      color: var(--Bright-Blue);
+    }
+
+    @include view-below(sm) {
+      display: none;
+    }
+  }
+
+  .clear-completed {
+    cursor: pointer;
+  }
+
+  .clear-completed:hover {
+    color: var(--input-text);
+  }
+}
